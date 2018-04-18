@@ -7,8 +7,12 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
     <Canvas>
-        <Button x:Name="btnSetWord" Content=" Set Word "/>
+        <TextBox x:Name="txtTemp" MinWidth="100" Canvas.Top="20"/>
+        <Button x:Name="btnSetWord" Content=" Set Word " Click="btnSetWord_Click"/>
         <Label x:Name="lblInstructions" Content="Enter letter here:" Canvas.Top="75" MinWidth="100"/>
         <TextBox x:Name="txtLetterInput" MinWidth="100" Canvas.Top="100"/>
+        <Label x:Name="lblUnderlines" Content="" Canvas.Left="235" Canvas.Top="92"/>
+        <Label x:Name="lblCorrect" Content="" Canvas.Left="237" Canvas.Top="92"/>
+        <Button x:Name="btnGuessLetter" Content="Guess" Click="btnGuessLetter_Click" MinWidth="100" Canvas.Top="118"/>
     </Canvas>
 </Window>
