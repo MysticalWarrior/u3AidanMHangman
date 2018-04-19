@@ -32,28 +32,48 @@ namespace u3AidanMHangman
             InitializeComponent();
         }
 
+        private void CreateLabel(int i, string content)
+        {
+            Label myLabel = new Label();
+            myLabel.Content = content;
+            Canvas.SetTop(myLabel, 92);
+            Canvas.SetLeft(myLabel, (235 + (i * 10)));
+            myCanvas.Children.Add(myLabel);
+        }
+
         private void btnSetWord_Click(object sender, RoutedEventArgs e)
         {
-            string tempWord = "lineage"; //streamreader.ReadLine();
-            MessageBox.Show(tempWord);
+            string tempWord = "sebisbad"; //streamreader.ReadLine();
+            //MessageBox.Show(tempWord);
+
             //add to array
             for (int i = 0; i < tempWord.Length; i++)
             {
                 goals[i] = tempWord.Substring(i, 1);
                 //MessageBox.Show(goals[i]);
             }
+
             //add underlines
             lblUnderlines.Content = "";
             for (int i = 0; i < tempWord.Length; i++)
             {
-                lblUnderlines.Content += "_ ";
+                CreateLabel(i, "_");
             }
             MessageBox.Show("word set");
         }
 
         private void btnGuessLetter_Click(object sender, RoutedEventArgs e)
         {
-
+            string tempLetter = txtLetterInput.Text;
+            MessageBox.Show("letter: " + tempLetter);
+            for (int i = 0; i < 9; i++)
+            {
+                if (tempLetter == goals[i])
+                {
+                    guessed[i] = tempLetter;
+                    CreateLabel(i, tempLetter);
+                }
+            }
         }
     }
 }
