@@ -45,7 +45,7 @@ namespace u3AidanMHangman
             //sets a background for the program
             ImageBrush backBrush = new ImageBrush();
             backBrush.ImageSource = new BitmapImage(new Uri
-               ("http://i38.photobucket.com/albums/e114/205704/Hangman%20background_zpsgf6hn8pc.jpg"));
+               ("https://gdurl.com/DKoV"));
             myCanvas.Background = backBrush;
 
             MessageBox.Show("Welcome to hangman. " + '\r' + '\r' + "Your goal is to save the man by guessing the correct word" + '\r' + "before he is hanged." + '\r' + '\r' +
