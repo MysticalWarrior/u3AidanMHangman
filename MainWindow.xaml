@@ -5,14 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:u3AidanMHangman"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Canvas x:Name="myCanvas">
-        <TextBox x:Name="txtTemp" MinWidth="100" Canvas.Top="20"/>
-        <Button x:Name="btnSetWord" Content=" Set Word " Click="btnSetWord_Click"/>
-        <Label x:Name="lblInstructions" Content="Enter letter here:" Canvas.Top="75" MinWidth="100"/>
-        <TextBox x:Name="txtLetterInput" MinWidth="100" Canvas.Top="100"/>
-        <Label x:Name="lblUnderlines" Content="" Canvas.Left="235" Canvas.Top="92"/>
-        <Button x:Name="btnGuessLetter" Content="Guess" Click="btnGuessLetter_Click" MinWidth="100" Canvas.Top="118"/>
-        <Label x:Name="lblGuessed" Content="Guessed Letters: " Canvas.Left="137" Canvas.Top="10"/>
+        Title="Hangerminator 3000" Height="350" Width="350">
+    <Canvas x:Name="myCanvas" Height="320" Width="340">
+        <!-- <TextBox x:Name="txtTemp" MinWidth="100" Canvas.Top="20" Canvas.Left="100"/>
+        <Button x:Name="btnSetWord" Content=" Set Word " Click="btnSetWord_Click" Width="100" Canvas.Top="38" Canvas.left="100"/> -->
+        <Label x:Name="lblInstructions" Content="Enter guess here:" MinWidth="100"  Canvas.Right="10"/>
+        <TextBox x:Name="txtLetterInput" MinWidth="100" Canvas.Top="26" Canvas.Right="10"/>
+        <Button x:Name="btnGuessLetter" Content="Guess" Click="btnGuessLetter_Click" MinWidth="100" Canvas.Top="43"  Canvas.Right="10"/>
+        <Label x:Name="lblGuessed" Content="Guessed Letters: " Canvas.Top="62" Canvas.Right="10" Canvas.Left="105"/>
+        <Canvas x:Name="cvsGuess"  Width="140" Height="24" Canvas.Right="10" Canvas.Top="92" Canvas.Left="169"/>
+        <Ellipse x:Name="life0" Visibility="Hidden" Fill="Black" Height="36" Canvas.Left="90" Canvas.Top="123" Width="37"/>
+        <Rectangle x:Name="life1" Visibility="Hidden" Fill="Black" Height="40" Canvas.Left="105" Canvas.Top="158" Width="6"/>
+        <Rectangle x:Name="life2" Visibility="Hidden" Fill="Black" Height="6" Canvas.Left="74" Canvas.Top="158" Width="31"/>
+        <Rectangle x:Name="life3" Visibility="Hidden" Fill="Black" Height="6" Canvas.Left="110" Canvas.Top="158" Width="34"/>
+        <Rectangle x:Name="life4" Visibility="Hidden" Fill="Black" Height="38" Canvas.Left="117" Canvas.Top="193" Width="5" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-30.76"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Rectangle x:Name="life5" Visibility="Hidden" Fill="Black" Height="37" Canvas.Left="96" Canvas.Top="195" Width="6" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="23.084"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
     </Canvas>
 </Window>
